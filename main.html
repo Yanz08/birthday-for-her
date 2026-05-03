@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Evaluasi Gamelan Lelambatan - Cinematic</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#2c0b0e,#5c1a1b);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* PARALLAX ORNAMEN */
+.ornament{
+  position:fixed;
+  top:0;
+  width:120px;
+  height:100vh;
+  background:('https://www.freepik.com/free-photos-vectors/bali-wallpaper') repeat-y;
+  opacity:0.15;
+  z-index:0;
+}
+.left{left:0}
+.right{right:0;transform:scaleX(-1)}
+
+canvas{
+  position:fixed;
+  top:0;left:0;
+  z-index:-1;
+}
+
+.section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:60px 20px;
+}
+
+.content{
+  max-width:900px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.6);
+}
+
+.fade-word span{
+  opacity:0;
+  display:inline-block;
+  transform:translateY(20px);
+  animation:wordIn 0.6s forwards;
+}
+
+@keyframes wordIn{
+  to{opacity:1;transform:translateY(0)}
+}
+
+h1{text-align:center;color:#ffd700;margin-bottom:20px}
+h2{color:#ffcc70;margin-bottom:15px;border-left:5px solid gold;padding-left:10px}
+p,li{line-height:1.7;margin-top:10px}
+ul{margin-left:20px}
+
+.table{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th,td{border:1px solid rgba(255,255,255,0.2);padding:10px}
+th{background:#d4af37;color:black}
+
+.nav{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+}
+.nav a{
+  display:block;
+  margin:10px 0;
+  width:12px;height:12px;
+  background:white;
+  border-radius:50%;
+  opacity:0.5;
+}
+.nav a:hover{opacity:1}
+</style>
+</head>
+
+<body>
+
+<div class="ornament left"></div>
+<div class="ornament right"></div>
+
+<canvas id="bg"></canvas>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4b3f0cbe8f.mp3?filename=balinese-gamelan-110624.mp3" type="audio/mpeg">
+</audio>
+
+<div class="nav">
+    <a href="#s1"></a>
+    <a href="#s2"></a>
+    <a href="#s3"></a>
+    <a href="#s4"></a>
+    <a href="#s5"></a>
+    <a href="#s6"></a>
+</div>
+
+<section class="section" id="s1">
+<div class="content">
+<h1>Evaluasi Pembelajaran</h1>
+<h3 style="text-align:center"><b>Rubik Penilaian Mata Pelajaran Seni Budaya</b></h3>
+<h3 style="text-align:center">(Seni Musik Tradisional) </h3>
+<p> </p>
+<p style="text-align:center">I Wayan Suardana (202409009)</p>
+<p style="text-align:center"></p>
+
+</div>
+</section>
+
+<section class="section" id="s2">
+<div class="content">
+<h2>Latar Belakang</h2>
+<p>Pembelajaran Seni Musik Tradisional Bali, khususnya pada materi Gending Lelambatan dalam gamelan, memiliki peran penting dalam membentuk keterampilan musikal, kepekaan rasa (feeling), serta sikap disiplin dan kerja sama peserta didik. Gending lelambatan dikenal sebagai komposisi yang bertempo lambat, berstruktur jelas (kawitan, pengawak, pengecet), serta menonjolkan keseimbangan dan keharmonisan antar instrumen.</p>
+<p>Dalam praktiknya, memainkan gending lelambatan tidak hanya menuntut kemampuan teknik individu seperti ketepatan pukulan dan penguasaan pola, tetapi juga kemampuan kolektif seperti menjaga tempo, memahami isyarat kendang, serta membangun kekompakan dalam sekaa (kelompok). Oleh karena itu, diperlukan suatu sistem penilaian yang mampu mengukur aspek kognitif (pemahaman struktur gending), psikomotorik (keterampilan memainkan alat), dan afektif (sikap, disiplin, dan kerja sama).</p>
+<p>Penilaian ini dirancang untuk mengetahui sejauh mana peserta didik mampu:</p>
+    <ul>
+    <li>Memainkan gending lelambatan sesuai teknik yang benar</li>
+    <li>Memahami struktur dan dinamika gending</li>
+    <li>Menampilkan rasa musikal yang sesuai karakter lelambatan (halus, agung, dan teratur)</li>
+    <li>Bekerja sama dalam kelompok gamelan secara harmonis</li>
+    </ul>
+<p>Dengan adanya penilaian yang terstruktur, diharapkan guru dapat memberikan umpan balik yang tepat serta membantu siswa meningkatkan kualitas permainan gamelan mereka.</p>
+</div>
+</section>
+
+<section class="section" id="s3">
+<div class="content">
+    <h2>Strategi Penilaian (Sumatif)</h2>
+    <p>Strategi yang digunakan adalah <b>penilaian sumatif</b>, yaitu penilaian yang dilakukan pada akhir proses pembelajaran untuk mengukur pencapaian kompetensi peserta didik secara keseluruhan.</p>
+
+    <p>Penilaian ini dilaksanakan dalam bentuk <i>unjuk kerja (performance assessment)</i>, di mana siswa menampilkan hasil latihan mereka dalam sebuah pementasan gamelan.</p>
+
+    <ul>
+      <li><b>Dilaksanakan di akhir pembelajaran</b><br>Setelah siswa melalui proses latihan dan pemahaman materi.</li>
+      <li><b>Mengukur kompetensi secara menyeluruh</b><br>Mencakup teknik, struktur, kekompakan, dan ekspresi musikal.</li>
+      <li><b>Berbasis kinerja nyata</b><br>Penilaian dilakukan melalui penampilan langsung.</li>
+      <li><b>Menggunakan rubrik yang jelas</b><br>Agar penilaian objektif dan transparan.</li>
+      <li><b>Berfungsi sebagai evaluasi akhir</b><br>Digunakan untuk menentukan tingkat keberhasilan siswa.</li>
+    </ul>
+
+    <p>Melalui penilaian ini, guru dapat melihat hasil akhir proses belajar siswa sekaligus kesiapan mereka dalam menampilkan gending lelambatan secara utuh.</p>
+  </div>
+</section>
+
+<section class="section" id="s4">
+<div class="content">
+   <h2>Langkah-Langkah Penilaian</h2>
+
+    <h3>1. Perencanaan Penilaian</h3>
+    <ul>
+      <li>Menentukan tujuan pembelajaran</li>
+      <li>Menentukan aspek penilaian (teknik, tempo, kekompakan, struktur, ekspresi)</li>
+      <li>Menyusun rubrik penilaian</li>
+    </ul>
+
+    <h3>2. Persiapan Pelaksanaan</h3>
+    <ul>
+      <li>Menentukan waktu dan tempat</li>
+      <li>Menyiapkan alat gamelan</li>
+      <li>Membagi kelompok (sekaa)</li>
+      <li>Menjelaskan kriteria penilaian</li>
+    </ul>
+
+    <h3>3. Pelaksanaan Penilaian</h3>
+    <ul>
+      <li>Siswa menampilkan gending lelambatan</li>
+      <li>Guru melakukan observasi langsung</li>
+      <li>Penilaian berdasarkan rubrik</li>
+    </ul>
+
+    <h3>4. Pemberian Skor</h3>
+    <ul>
+      <li>Memberikan skor tiap aspek (1–4)</li>
+      <li>Menjumlahkan skor</li>
+    </ul>
+
+    <h3>5. Pengolahan Nilai</h3>
+    <ul>
+      <li>Nilai akhir = (Skor / Skor maksimal) × 100</li>
+      <li>Klasifikasi hasil</li>
+    </ul>
+
+    <h3>6. Umpan Balik</h3>
+    <ul>
+      <li>Memberikan evaluasi</li>
+      <li>Menyampaikan kelebihan dan kekurangan</li>
+      <li>Memberikan saran perbaikan</li>
+    </ul>
+</div>
+</section>
+
+<section class="section" id="s5">
+<div class="content">
+<h2>Rubrik Penilaian</h2>
+<div class="table">
+<table>
+<tr>
+<th>No</th>
+<th>Aspek Penilaian</th>
+<th>Skor 4 (Sangat Baik)</th>
+<th>Skor 3 (Baik)</th>
+<th>Skor 2 (Cukup)</th>
+<th>Skor 1 (Kurang)</th>
+</tr>
+<tr>
+<td>1</td>
+<td><b>Teknik Pukulan</b></td>
+<td>Pukulan sangat bersih, tepat, dan konsisten; tidak ada kesalahan teknik</td>
+<td>Pukulan cukup tepat, ada sedikit kesalahan kecil</td>
+<td>Pukulan kurang tepat dan kurang konsisten</td>
+<td>Banyak kesalahan teknik, pukulan tidak jelas</td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>Ketepatan Tempo & Irama</b></td>
+<td>Tempo sangat stabil, mengikuti kendang dengan tepat, tidak keluar dari pola lelambatan</td>
+<td>Tempo cukup stabil, kadang sedikit berubah</td>
+<td>Tempo sering tidak stabil</td>
+<td>Tempo tidak sesuai dan sering keluar dari irama</td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>Kekompakan (Kerja Sama)</b></td>
+<td>Sangat kompak, saling mendukung antar pemain, tidak ada yang mendahului/terlambat</td>
+<td>Cukup kompak, ada sedikit ketidaksamaan</td>
+<td>Kurang kompak, sering tidak bersamaan</td>
+<td>Tidak ada kekompakan dalam kelompok</td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>Pemahaman Struktur Gending</b></td>
+<td>Sangat memahami struktur (kawitan, pengawak, pengecet), masuk dan berhenti tepat</td>
+<td>Cukup memahami struktur, ada sedikit kesalahan</td>
+<td>Kurang memahami struktur</td>
+<td>Tidak memahami struktur gending</td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>Ekspresi / Rasa Musikal</b></td>
+<td>Penjiwaan sangat baik, sesuai karakter lelambatan (halus, agung, tenang)</td>
+<td>Cukup menjiwai</td>
+<td>Kurang penjiwaan</td>
+<td>Tidak menunjukkan ekspresi musikal</td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>Disiplin & Sikap</b></td>
+<td>Sangat disiplin, fokus, dan serius selama penampilan</td>
+<td>Cukup disiplin</td>
+<td>Kurang disiplin</td>
+<td>Tidak disiplin dan tidak serius</td>
+</tr>
+</table>
+<p>Keterangan Penilaian</p>
+<ul>
+    <li>>Skor maksimal: 24</li>
+    <li>Nilai akhir = (Skor diperoleh / 24) × 100</li>
+</ul>
+<p>Kategori Nilai</p>
+<ul>
+    <li>86–100 = Sangat Baik</li>
+    <li>76–85 = Baik</li>
+    <li>66–75 = Cukup</li>
+<li>< 65 = Kurang</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="s6">
+<div class="content">
+<h1>TERIMA KASIH</h1>
+</div>
+</section>
+
+<script>
+// particle interaktif
+const canvas=document.getElementById('bg');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+let particles=[];
+let mouse={x:null,y:null};
+
+window.addEventListener('mousemove',e=>{
+  mouse.x=e.x; mouse.y=e.y;
+});
+
+for(let i=0;i<120;i++){
+  particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2,dx:(Math.random()-0.5),dy:(Math.random()-0.5)});
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle='gold';
+  particles.forEach(p=>{
+    let dx=mouse.x-p.x;
+    let dy=mouse.y-p.y;
+    let dist=Math.sqrt(dx*dx+dy*dy);
+    if(dist<100){p.x-=dx/20;p.y-=dy/20;}
+
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fill();
+
+    p.x+=p.dx; p.y+=p.dy;
+    if(p.x<0||p.x>canvas.width)p.dx*=-1;
+    if(p.y<0||p.y>canvas.height)p.dy*=-1;
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+
+// text animation per kata
+function animateText(){
+  document.querySelectorAll('.fade-word').forEach(el=>{
+    let words=el.innerText.split(' ');
+    el.innerHTML='';
+    words.forEach((w,i)=>{
+      let span=document.createElement('span');
+      span.innerText=w+' ';
+      span.style.animationDelay=(i*0.2)+'s';
+      el.appendChild(span);
+    });
+  });
+}
+animateText();
+</script>
+
+</body>
+</html>
